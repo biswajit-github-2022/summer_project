@@ -1,0 +1,42 @@
+import pytesseract
+from PIL import Image
+import re
+
+# Set up pytesseract to point to the tesseract executable (if not in PATH)
+# For example:
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+def extract_text_from_image(image_path):
+    # Open the image file
+    img = Image.open(image_path)
+
+    # Use pytesseract to do OCR on the image
+    text = pytesseract.image_to_string(img)
+
+    return text
+
+def process_extracted_text(text):
+    # Regular expression to match questions and answers (True/False)
+    qa_pattern = re.compile(r'(\d+\..+?)(True|False)', re.DOTALL)
+    
+    # Find all matches
+    matches = qa_pattern.findall(text)
+
+    # Process matches into a list of dictionaries
+    qa_list = []
+    for match in matches:
+        question, answer = match
+        question = question.strip()
+        answer = answer.strip()
+        qa_list.append({"question": question, "answer": answer})
+
+    return qa_list
+
+# Example usage
+image_path = 'questions_image.png'  # Replace with your image file path
+extracted_text = extract_text_from_image(image_path)
+qa_list = process_extracted_text(extracted_text)
+
+# Print the extracted questions and answers
+for qa in qa_list:
+    print(f"Question: {qa['question']}\nAnswer: {qa['answer']}\n")
