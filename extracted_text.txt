@@ -1,0 +1,56 @@
+ 
+
+————————— Ch )
+|" TRUE/FALSE
+
+     
+      
+    
+ 
+ 
+  
+
+SN | Statement
+
+l If a € R*. then a trace of the matrix aa’ is equal to the Buclidean distance |
+
+between the origin and the point a.
+PCA becomes equivalent to LDA if we project samples of each class using PCA |
+
+| independently.
+
+For a particular x, the value of the probability mass function can be greater than |
+
+one.
+
+The PCA will project 2D-data points to [1, O\? if variance(x) > variance(y). |
+
+| If data distributions exactly follow y=x, then the rank of the covariance matrix |
+| Tse
+
+_? |
+will be zero. |
+
+| |
+If X and Y are two real-valued random variables such that Cou(X ,.Y) <0 Chew) | |
+at least one of X or Y must have negative variance i.e. either o(X) < 0 or | bolee - |
+ay) <0. | |
+|
+
+Naive Bayes assumes that all features are conditionally independent given the | a
+
+class label.
+LDA is sensitive to outliers in the dataset.
+
+|
+A die is loaded so that the probability of a face coming up is proportional to the |
+number on that face. The die is rolled with outcome X. The expected value of X
+
+is greater than 4.
+
+  
+
+| B = {[1, 1)”, [-1, 0]"} is one of the basis in 2D-space.
+
+ 
+
